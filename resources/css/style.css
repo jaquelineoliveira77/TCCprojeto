@@ -1,0 +1,19 @@
+
+ /* Defina o tamanho da imagem para cobrir toda a tela */
+ #banner{
+    position: fixed;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+/* Remova margens e preenchimento da página para que a imagem possa cobrir completamente */
+body, html {
+    margin: 1;
+    padding: 0;
+    height: 90%;
+    overflow: hidden; /* Evita barras de rolagem */
+}
+
