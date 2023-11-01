@@ -40,6 +40,7 @@ Route::get('psicologa/create', "App\Http\Controllers\PsicologaController@create"
 Route::post('psicologa', "App\Http\Controllers\PsicologaController@store")->name("psicologa.store");
 Route::get('psicologa/show', "App\Http\Controllers\PsicologaController@show")->name("psicologa.show");
 
+// Rota para a página de confirmação
 Route::get('psicologa/agendDia', "App\Http\Controllers\PsicologaAgendDiaController@agendDia")->name("psicologa.agendDia");
 Route::get('psicologa/histor', "App\Http\Controllers\PsicologaHistorController@histor")->name("psicologa.histor");
 

@@ -101,8 +101,9 @@ class PsicologaController extends Controller
 
         return view('psicologa.show')->with('solicitacaos',$solicitacaos);
 
-
     }
+
+
     public function edit($id)
 
     {
@@ -121,7 +122,22 @@ class PsicologaController extends Controller
 
     }
 
+    // public function exibirBotao()
+    // {
+    //     return view('psicologa.show'); // Página com o botão de confirmação
+    // }
+
+    // public function exibirConfirmacao(Request $request)
+    // {
+        
+    //     //console.log("teste");
+    //     $confirmacao = $request->input('confirmacao'); // Obtém a confirmação do botão
+
     
+    //     // Aqui você pode processar a confirmação e passar os dados para a página de confirmação
+    //     // return view('psicologa.agendDia', ['confirmacao' => $confirmacao]);
+    //     return redirect()->route('psicologa.agendDia');
+    // }
 
 
 }
