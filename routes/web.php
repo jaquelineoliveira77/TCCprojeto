@@ -42,6 +42,33 @@ Route::get('psicologa/show', "App\Http\Controllers\PsicologaController@show")->n
 
 // Rota para a página de confirmação
 Route::get('psicologa/agendDia', "App\Http\Controllers\PsicologaAgendDiaController@agendDia")->name("psicologa.agendDia");
+// Route::get('psicologa/show', "App\Http\Controllers\PsicologaAgendDiaController@agendamentoConcluido")->name("psicologa.show");
+// Route::get('psicologa/agendDia', "App\Http\Controllers\PsicologaAgendDiaController@confirmacao")->name("psicologa.agendDia");
+
+//rotas para cadastro e visualização dos atendimentos realizados
+Route::get('psicologaCadAtd/create', "App\Http\Controllers\PsicologaCadAtdController@create")->name("psicologaCadAtd.create");
+Route::post('psicologaCadAtd', "App\Http\Controllers\PsicologaCadAtdController@store")->name("psicologaCadAtd.store");
+Route::get('psicologaCadAtd/show', "App\Http\Controllers\PsicologaCadAtdController@show")->name("psicologaCadAtd.show");
+Route::post('psicologa/confirmarSolicitacao/{id}', "App\Http\Controllers\PsicologaController@confirmarSolicitacao")->name("psicologa.confirmarSolicitacao");
+
+
+Route::get('providencia/create', "App\Http\Controllers\ProvidenciaController@create")->name("providencia.create");
+Route::post('providencia/store', "App\Http\Controllers\ProvidenciaController@store")->name("providencia.store");
+Route::get('providencia/show', "App\Http\Controllers\ProvidenciaController@show")->name("providencia.show");
+
+Route::get('motivo/create', "App\Http\Controllers\MotivoController@create")->name("motivo.create");
+Route::post('motivo/store', "App\Http\Controllers\MotivoController@store")->name("motivo.store");
+Route::get('motivo/show', "App\Http\Controllers\MotivoController@show")->name("motivo.show");
+
+
+
+
+// Route::get('/confirmacao-agendamento', "App\Http\Controllers\PsicologaAgendDiaController@confirmacao")->name("psicologa.agendDia");
+// Route::get('/psicologa/agendDia', "App\Http\Controllers\PsicologaAgendDiaController@agendamentoConcluido")->name("psicologa.agendDia");
+
+
+
+
 Route::get('psicologa/histor', "App\Http\Controllers\PsicologaHistorController@histor")->name("psicologa.histor");
 
 

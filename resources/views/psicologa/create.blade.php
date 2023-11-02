@@ -18,6 +18,10 @@
               <a class="nav-item nav-link active" id="nav-atendimento-tab" data-toggle="tab" href="{{route("psicologa.create")}}" role="tab" aria-controls="nav-atendimento" aria-selected="false">Solicitar Atendimento</a>
               <a class="nav-item nav-link active" id="nav-pendente-tab" data-toggle="tab" href="{{route("psicologa.show")}}" role="tab" aria-controls="nav-pendente" aria-selected="false">Atendimentos Pendentes</a>
               <a class="nav-item nav-link active" id="nav-agendamentoDia-tab" data-toggle="tab" href="{{route("psicologa.agendDia")}}" role="tab" aria-controls="nav-agendamentoDia" aria-selected="false">Agendamentos do Dia</a>
+              <a class="nav-item nav-link active" id="nav-show-tab" data-toggle="tab" href="{{route("providencia.show")}}" role="tab" aria-controls="nav-descricao" aria-selected="false">Providências Cadastradas</a>
+              <a class="nav-item nav-link active" id="nav-show-tab" data-toggle="tab" href="{{route("motivo.show")}}" role="tab" aria-controls="nav-descricao" aria-selected="false">Motivos Cadastradas</a>
+              <a class="nav-item nav-link active" id="nav-inspecaoAtendimento-tab" data-toggle="tab" href="{{route("psicologaCadAtd.show")}}" role="tab" aria-controls="nav-inspecaoAtendimento" aria-selected="false">Inspeção de Atendimentos</a>
+
               <a class="nav-item nav-link active" id="nav-historico-tab" data-toggle="tab" href="#nav-historico" role="tab" aria-controls="nav-historico" aria-selected="false">Histórico de Atendimentos</a>
             </div>
           </nav>
@@ -29,6 +33,15 @@
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"></div>
           </div> --}}
+
+            <div class="form-group">
+                <label for="id-input-users">Usuário</label>
+                <select class="form-select" name="idUsers" aria-label="Selecione um aluno">
+                    @foreach ($users as $user)
+                        <option value="{{$user->id}}">{{$user->name}}</option>
+                    @endforeach
+                </select>
+            </div>
            
             <div class="col-sm-5">
                 <label for="id-input-comentario" class="form-label">Escreva um comentário caso necessário</label>
@@ -45,10 +58,10 @@
                 <input name="ativo" type="checkbox" id="id-input-ativo" value="1">
             </div>
 
-            <div class="col-sm-5"> 
+            {{-- <div class="col-sm-5"> 
                 <label for="id-input-periodo" class="form-label">Selecione a data e hora</label>
                 <input name="periodo" type="datetime-local" id="id-input-periodo" placeholder="Selecione a data e hora" required>   
-            </div> 
+            </div>  --}}
 
             <div class="my-1">
               <a href="{{route("psicologa.index")}}" class="btn btn-primary">Voltar</a>

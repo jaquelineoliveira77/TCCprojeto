@@ -27,11 +27,47 @@ class PsicologaAgendDiaController extends Controller
      * @return void
      */
 
+    //  meu index
     public function agendDia()
     {
 
       return view('psicologa.agendDia');
     }
+
+
+    public function confirmacao()
+    {
+       
+    }
+
+    public function agendamentoConcluido()
+    {
+        
+    }
+
+
+
+
+
+    // public function confirmarAtendimento(Request $request)
+    // {
+    //     // Aqui você pode adicionar a lógica para processar a confirmação de atendimento
+    //     // por exemplo, salvar em banco de dados, atualizar um registro, etc.
+
+    //     // Exemplo de ação (salvar em um banco de dados, por exemplo)
+    //     $agendamento = Agendamento::find($request->input('solicitacaos.id'));
+        
+        
+    //     $agendamento->confirmado = true;
+        
+       
+    //     $agendamento->save();
+        
+
+    //     // Após a confirmação, você pode redirecionar para outra página ou retornar uma resposta
+    //     // return redirect()->route('psicologa.agendDia');
+    //     return view('psicologa.agendDia');
+    //}
 
 
     // public function exibirBotao()

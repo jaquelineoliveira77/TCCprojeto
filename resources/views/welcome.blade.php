@@ -5,7 +5,19 @@
        
         Página inicial.
 
-        <link rel="styleheet" href="/css/style.css">
+        {{-- <link rel="styleheet" href="/css/style.css"> --}}
+
+        <head>
+            <!-- Adicione o link para seu arquivo CSS -->
+            <link rel="stylesheet" href="{{ asset('resources/css/styles.css') }}">
+        </head>
+        
+        <body class="background-image">
+            <!-- Restante do conteúdo da sua página aqui -->
+            <img id="/img/banner.jpg" src="{{ asset('/img/Banner.jpg') }}"
+         alt="Banner">
+        </body>
+
 
         <br> <br>
 
@@ -14,8 +26,8 @@
         <br> <br>
 
 
-        <img id="/img/banner.jpg" src="{{ asset('/img/Banner.jpg') }}"
-         alt="Banner">
+        {{-- <img id="/img/banner.jpg" src="{{ asset('/img/Banner.jpg') }}"
+         alt="Banner"> --}}
 
 
 

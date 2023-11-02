@@ -1,4 +1,15 @@
 
+/* styles.css */
+.background-image {
+    background-image: url('/public/img/capa/banner.jpg');
+    /* Adicione outras propriedades de estilo, como tamanho, posição, etc., conforme necessário */
+}
+
+
+
+
+
+
  /* Defina o tamanho da imagem para cobrir toda a tela */
  #banner{
     position: fixed;
@@ -16,4 +27,6 @@ body, html {
     height: 90%;
     overflow: hidden; /* Evita barras de rolagem */
 }
+
+
 
