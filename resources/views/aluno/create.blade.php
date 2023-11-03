@@ -31,16 +31,16 @@
           <div class="col-sm-5">
             <label for="id-input-atdGrupo" class="form-label">Aceita participar de um atendimento em grupo ?</label>
             <input name="atdGrupo" type="text" class="form-control" id="id-input-atdGrupo" placeholder="Atendimento em grupo ?" required>
-
+          
           <div class="col-sm-5">
             <label for="id-input-ativo" class="form-label">Seu cadastro está ativo ?</label>
             <input name="ativo" type="text" class="form-control" id="id-input-ativo" placeholder="Cadastro ativo ?" required>
           </div>
 
-          <div class="col-sm-5"> 
+          {{-- <div class="col-sm-5"> 
             <label for="id-input-periodo" class="form-label">Selecione a data e hora</label>
             <input name="periodo" type="datetime-local" id="id-input-periodo" placeholder="Selecione a data e hora" required>   
-          </div> 
+          </div>  --}}
 
           <br>
 

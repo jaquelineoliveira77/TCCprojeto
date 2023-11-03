@@ -13,7 +13,7 @@
         </script> --}}
         
 
-      <h1>Providências Cadastradas</h1> <br>
+      <h1>Servidores Cadastrados</h1> <br>
 
           <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -32,9 +32,11 @@
 
           <br>
             {{-- <div class="col-sm-5"> --}}
-                @foreach ($motivos as $motivo)       
-                
-                <p>Motivo: {{ $motivo->descricao }}</p>
+                @foreach ($servidors as $servidor)       
+                <p>Nome do Servidor: {{ $servidor->admin_name }}</p>
+                <p>Setor: {{ $servidor->setor }}</p>
+                <p>Siape: {{ $servidor->siape }}</p>
+                <p>Telefone: {{ $servidor->telefone }}</p>
             
                 @endforeach
 

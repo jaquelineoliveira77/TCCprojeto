@@ -20,6 +20,7 @@
                     <a class="btn btn-success" href="{{route("psicologaCadAtd.create")}}">Cadastrar Atendimento</a>
                     <a class="btn btn-success" href="{{route("providencia.create")}}">Cadastrar Providencia</a> <br><br>
                     <a class="btn btn-success" href="{{route("motivo.create")}}">Cadastrar Motivos</a>
+                    <a class="btn btn-success" href="{{route("psicologaCad.show")}}">Servidores Cadastrados</a>
 
                     <a class="btn btn-info" href="{{url("/")}}">Voltar</a>
                 </div>

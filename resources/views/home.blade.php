@@ -18,9 +18,9 @@
 
                     <br> <br>
 
-                    <a href="{{route("aluno.index")}}" class="btn btn-primary">Menu de Atendimentos</a>
-                    <a href="{{route("alunoCad.create")}}" class="btn btn-primary">Realizar Cadastro</a>
-                    <a href="/" class="btn btn-primary">Voltar</a>
+                    <a class="btn btn-success" href="{{route("aluno.index")}}" >Menu de Atendimentos</a>
+                    <a class="btn btn-success" href="{{route("alunoCad.create")}}" >Realizar Cadastro</a>
+                    <a class="btn btn-info" href="/" >Voltar</a>
 
                 </div>
             </div>

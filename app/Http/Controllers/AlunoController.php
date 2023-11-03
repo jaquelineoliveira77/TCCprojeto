@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Aluno;
 use App\Models\Solicitacao;
-use App\Models\SolicitacaosAluno;
+use App\Models\SolicitacaosAlunos;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -67,7 +67,7 @@ class AlunoController extends Controller
         $solicitacao->ativo = $request->ativo;
         $solicitacao->save();
 
-        $solicitacaosAluno = new SolicitacaosAluno();
+        $solicitacaosAluno = new SolicitacaosAlunos();
         $solicitacaosAluno->Alunos_idUser = Auth::user()->id; // Pega o id do usuário que está logado
         $solicitacaosAluno->Solicitacaos_id = $solicitacao->id;      
         $solicitacaosAluno->estado = "A";

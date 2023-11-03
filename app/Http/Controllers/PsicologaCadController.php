@@ -78,14 +78,38 @@ class PsicologaCadController extends Controller
             $servidor->setor = $request->setor;
             $servidor->siape = $request->siape;
             $servidor->telefone = $request->telefone;
-            // $solicitacao->telefone = $request->input('ativo') ? 1 : 0;
             $servidor->save();
-            
-            return view("psicologaCad/create")->with("servidors", $servidor);
-           
-        // }
 
-        
+            $admin = new Admin(); 
+            $admin->name = $request->name;
+            $admin->save();
+            
+            return view("psicologaCad/create")->with("servidors", $servidor);     
+
+    }
+
+    public function show(Request $request)
+    {
+        // $providencia = DB::table('providencia')
+        // ->join('solicitacaos_alunos', 'alunos.idUser', '=', 'solicitacaos_alunos.Alunos_idUser')
+        // ->join('solicitacaos', 'solicitacaos_alunos.Solicitacaos_id', '=', 'solicitacaos.id')
+        // ->join('data_solicitacaos', 'data_solicitacaos.idDataSolicitacao', '=', 'data_solicitacaos.idDataSolicitacao')  
+        // ->join('users', 'alunos.idUser', '=', 'users.id') // Junção com a tabela 'users'
+        // ->select('users.name as user_name', 'alunos.curso', 'alunos.fase', 'solicitacaos.comentario', 'solicitacaos.atdGrupo', 'data_solicitacaos.periodo')
+        // ->get();
+
+        // $servidors = DB::select("SELECT * FROM servidors");
+
+        $servidors = DB::table('servidors')
+        // ->join('solicitacaos_alunos', 'id', '=', 'solicitacaos_alunos.Solicitacaos_id')
+        ->join('Admins', 'admins.id', '=', 'Servidors.Admins_id')
+        ->select('admins.name as admin_name', 'servidors.setor', 'servidors.siape', 'servidors.telefone')
+        ->get();
+
+   // dd($solicitacoes);
+
+
+        return view('psicologaCad.show')->with('servidors',$servidors);
 
     }
 

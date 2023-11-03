@@ -34,6 +34,11 @@ Route::get('aluno/histor', "App\Http\Controllers\AlunoHistorController@histor")-
 Route::get('alunoCad/create', "App\Http\Controllers\AlunoCadController@create")->name("alunoCad.create");
 Route::post('alunoCad', "App\Http\Controllers\AlunoCadController@store")->name("alunoCad.store");
 
+//rotas para cadastro de servidores     .
+Route::get('psicologaCad/create', "App\Http\Controllers\PsicologaCadController@create")->name("psicologaCad.create");
+Route::post('psicologaCad', "App\Http\Controllers\PsicologaCadController@store")->name("psicologaCad.store");
+Route::get('psicologaCad/show', "App\Http\Controllers\PsicologaCadController@show")->name("psicologaCad.show");
+
 //Rota psicologa
 Route::get('psicologa', "App\Http\Controllers\PsicologaController@index")->name("psicologa.index");
 Route::get('psicologa/create', "App\Http\Controllers\PsicologaController@create")->name("psicologa.create");
@@ -63,27 +68,7 @@ Route::get('motivo/show', "App\Http\Controllers\MotivoController@show")->name("m
 
 
 
-// Route::get('/confirmacao-agendamento', "App\Http\Controllers\PsicologaAgendDiaController@confirmacao")->name("psicologa.agendDia");
-// Route::get('/psicologa/agendDia', "App\Http\Controllers\PsicologaAgendDiaController@agendamentoConcluido")->name("psicologa.agendDia");
 
-
-
-
-Route::get('psicologa/histor', "App\Http\Controllers\PsicologaHistorController@histor")->name("psicologa.histor");
-
-
-//rotas para cadastro de servidores     .
-Route::get('psicologaCad/create', "App\Http\Controllers\PsicologaCadController@create")->name("psicologaCad.create");
-Route::post('psicologaCad', "App\Http\Controllers\PsicologaCadController@store")->name("psicologaCad.store");
-
-
-
-
-
-
-
-
-//Route::get('psicologa', "App\Http\Controllers\AgendamentosController@index")->name("psicologa.index");
 
 
 Auth::routes();

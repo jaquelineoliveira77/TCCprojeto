@@ -19,7 +19,8 @@
                     <a class="nav-item nav-link active" id="nav-show-tab" data-toggle="tab" href="{{route("providencia.show")}}" role="tab" aria-controls="nav-descricao" aria-selected="false">Providências Cadastradas</a>
                     <a class="nav-item nav-link active" id="nav-show-tab" data-toggle="tab" href="{{route("motivo.show")}}" role="tab" aria-controls="nav-descricao" aria-selected="false">Motivos Cadastradas</a>
                     <a class="nav-item nav-link active" id="nav-inspecaoAtendimento-tab" data-toggle="tab" href="{{route("psicologaCadAtd.show")}}" role="tab" aria-controls="nav-inspecaoAtendimento" aria-selected="false">Inspeção de Atendimentos</a>
-                    
+                    <a class="nav-item nav-link active" id="nav-servidors-tab" data-toggle="tab" href="{{route("psicologaCad.show")}}" role="tab" aria-controls="nav-servidors" aria-selected="false">Servidores Cadastrados</a>
+                    <a class="nav-item nav-link active" id="nav-atendimentosCad-tab" data-toggle="tab" href="{{route("psicologaCadAtd.create")}}" role="tab" aria-controls="nav-atendimentosCad" aria-selected="false">Cadastrar Atendimentos</a>
                 </div>
             </nav>
 
@@ -49,7 +50,7 @@
             <div class="my-1">
                 <a href="{{route("psicologa.index")}}" class="btn btn-primary">Voltar</a>
                 <button type="submit" class="btn btn-success">Salvar</button>
-                <button type="submit" class="btn btn-secondary">Limpar</button>
+                {{-- <button type="submit" class="btn btn-secondary">Limpar</button> --}}
             </div>
 
         </form>

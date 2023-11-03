@@ -21,7 +21,7 @@
 
         <br> <br>
 
-        <a href="{{route("home")}}" class="btn btn-primary">Home</a>
+        <a href="{{route("home")}}" class="btn btn-success">Home</a>
 
         <br> <br>
 
